@@ -22,7 +22,7 @@ export default class TodoControlService extends Service {
    */
   unpdateTodo(index, state) {
     this._todos[index].isDone = !!state;
-    this.refrechData();
+    this.refreshData();
   }
 
   /**
@@ -32,7 +32,7 @@ export default class TodoControlService extends Service {
    */
   renameTodo(index, new_name) {
     this._todos[index].name = new_name;
-    this.refrechData();
+    this.refreshData();
   }
 
   /**
@@ -42,14 +42,14 @@ export default class TodoControlService extends Service {
    */
   createTodo(name, isDone = false) {
     this._todos.push({ name, isDone });
-    this.refrechData();
+    this.refreshData();
   }
 
   /**
    * Обновление и сохранение данных
    */
-  refrechData() {
-    let todos = this._todos = this._todos;
+  refreshData() {
+    let todos = this._todos = { ...this._todos };
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 
