@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(238, 238, 238);
+}
+  
+.page-container {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 15px;
+}
+  
+.page-column {
+  background: rgb(243, 243, 243);
+  border: solid 1px rgb(206, 206, 206);
+  border-top: 0;
+  padding: 15px;
+  margin-top: $nav-height;
+}

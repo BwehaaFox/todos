@@ -1,0 +1,14 @@
+.input {
+  display: block;
+  padding: 7px 10px;
+  border: solid 1px rgb(155, 155, 155);
+  font-size: 1rem;
+  border-radius: 3px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &_error {
+    border-color: red;
+  }
+}

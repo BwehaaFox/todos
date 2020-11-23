@@ -1,0 +1,14 @@
+<input 
+  type="text"
+  class="input full-width {{if this.is_input_error 'input_error'}}" 
+  {{on 'input' this.inputChanged}}>
+
+<button 
+  type="button"
+  class="button full-width"
+  disabled={{this.is_input_error}}
+  {{on 'click' this.addTodo}}>
+  
+  Добавить
+
+</button>

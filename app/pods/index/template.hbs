@@ -1,0 +1,14 @@
+{{#each this.todos key='@index' as |todo index|}}
+  <TodoItem 
+    @name={{todo.name}}
+    @isDone={{todo.isDone}}
+    @onCheck={{fn this.todoChecked index}}
+    @model={{index}}/>
+
+{{else}}
+
+  <div class="empty-placeholder">
+    Задачи отсутствуют
+  </div>
+
+{{/each}}

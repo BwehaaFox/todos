@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<nav class="page-nav">
+  <div class="page-container ">
+    <LinkTo @route="index" class="logo">
+      TODOS
+    </LinkTo>
 
-{{outlet}}
+    <LinkTo @route="create-todo" class="button pull-right">
+      Добавить задачу
+    </LinkTo>
+  </div>
+</nav>
+
+<div class="page-container page-column">
+  {{outlet}}
+</div>
+

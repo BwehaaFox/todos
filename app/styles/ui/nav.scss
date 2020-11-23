@@ -1,0 +1,12 @@
+.page-nav {
+  background: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 6px #b7b7b7;
+}

@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'todo-list',
+    podModulePrefix: 'todo-list/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

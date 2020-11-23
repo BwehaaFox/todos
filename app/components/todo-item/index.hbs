@@ -1,0 +1,9 @@
+<div class="todo-item {{if this.is_check 'todo-item_checked'}}" ...attributes>
+  <label class="todo-item__check-area todo-item__column">
+    <input type="checkbox" class="todo-item__hidden-checkbox" checked={{@isDone}} {{on 'click' this.check}}>
+    <span class="todo-item__fake-checkbox"></span>
+  </label>
+  <LinkTo @route="todo" @model={{@model}} class="todo-item__title  todo-item__column">
+    {{@name}}
+  </LinkTo>
+</div>

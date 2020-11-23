@@ -1,0 +1,14 @@
+<input 
+  type="text" 
+  value={{this.todo.name}} 
+  class="input  full-width {{if this.is_input_error 'input_error'}}"
+  {{on 'blur' this.inputChanged}}>
+
+<button 
+  type="button" 
+  class="button full-width"
+  {{on 'click' this.toggleDone}}>
+
+  {{if this.is_done 'Отметить не выполненым' 'Отметить выполненым'}}
+  
+</button>

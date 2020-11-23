@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  padding: 8px 15px;
+  background: rgb(112, 112, 255);
+  border: solid 1px rgb(86, 86, 190);
+  font-weight: bold;
+  color:  white;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1rem;
+
+  &:hover {
+    background: rgb(100, 100, 202);
+  }
+
+  &:disabled {
+    background: rgb(195, 195, 224);
+    border-color: rgb(169, 169, 204);
+    cursor: not-allowed;
+  }
+}

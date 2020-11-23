@@ -7,4 +7,9 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+
+  this.route('index', { path: '/' });
+  this.route('create-todo', { path: '/create-todo' });
+  this.route('todo', { path: '/todo/:id' });
+
 });
