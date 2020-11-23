@@ -49,7 +49,7 @@ export default class TodoControlService extends Service {
    * Обновление и сохранение данных
    */
   refreshData() {
-    let todos = this._todos = { ...this._todos };
+    let todos = this._todos = [ ...this._todos ];
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 
