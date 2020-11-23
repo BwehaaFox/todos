@@ -5,26 +5,40 @@ import { tracked } from '@glimmer/tracking';
 
 export default class CreateTodoController extends Controller {
 
-    @service('todo-control') todo_service;
+  @service('todo-control') todo_service;
 
-    @tracked is_input_error;
-    input_name = '';
+  /**
+   * Валидно ли поле
+   */
+  @tracked is_input_error;
 
-    @action
-    inputChanged({ target: { value } }) {
-        this.is_input_error = !value;
-        this.input_name = value
+  /**
+   * Стартовое значение
+   */
+  input_name = '';
+
+  /**
+   * Значение поля ввода изменилось
+   * @param {*} param0 
+   */
+  @action
+  inputChanged({ target: { value } }) {
+      this.is_input_error = !value;
+      this.input_name = value
+  }
+
+  /**
+   * Добавление новой задачи
+   */
+  @action 
+  addTodo() {
+    let target_name = this.input_name;
+    this.is_input_error = !target_name;
+
+    if(target_name) {
+        this.todo_service.createTodo(target_name);
+        this.transitionToRoute('index')
     }
-
-    @action 
-    addTodo() {
-        let target_name = this.input_name;
-        this.is_input_error = !target_name;
-        if(target_name) {
-            this.todo_service.createTodo(target_name);
-            this.transitionToRoute('index')
-        } 
-        
-    }
+  }
 
 }
